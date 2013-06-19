@@ -2,8 +2,8 @@ module Tire
   module Results
 
     class Item
-      extend  ActiveModel::Naming
-      include ActiveModel::Conversion
+      # extend  ActiveModel::Naming
+      # include ActiveModel::Conversion
 
       # Create new instance, recursively converting all Hashes to Item
       # and leaving everything else alone.
@@ -49,9 +49,9 @@ module Tire
         !!id
       end
 
-      def errors
-        ActiveModel::Errors.new(self)
-      end
+      # def errors
+      #   ActiveModel::Errors.new(self)
+      # end
 
       def valid?
         true
